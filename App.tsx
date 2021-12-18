@@ -12,7 +12,7 @@ import RootRoute from './routes/index';
 import './utils/polyfill';
 
 // css
-import 'font-awesome/css/font-awesome.css';
+import '@fortawesome/fontawesome-free/css/all.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'amis/lib/themes/default.css';
 import './scss/style.scss'
