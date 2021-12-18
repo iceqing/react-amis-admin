@@ -6,15 +6,15 @@ import {
     confirm
 } from 'amis';
 import axios from 'axios';
-import { MainStore } from './stores/index';
+import { MainStore } from './stores';
 import * as copy from 'copy-to-clipboard';
-import RootRoute from './routes/index';
+import RootRoute from './routes';
 import './utils/polyfill';
 
 // css
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import 'amis/lib/themes/default.css';
+import 'amis/lib/themes/cxd.css';
 import './scss/style.scss'
 
 export default function():JSX.Element {

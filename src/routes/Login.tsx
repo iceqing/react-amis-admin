@@ -2,7 +2,7 @@ import filter = require('lodash/filter');
 import * as React from 'react';
 import AMisRenderer from '../components/AMisRenderer';
 import { inject, observer } from 'mobx-react';
-import { IMainStore } from '../stores/index';
+import { IMainStore } from '../stores';
 import { RouteComponentProps, withRouter } from 'react-router';
 
 let ContextPath = '';

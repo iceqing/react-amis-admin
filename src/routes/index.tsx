@@ -8,7 +8,7 @@ import { observer } from 'mobx-react';
 import { IMainStore } from '../stores';
 import Login from './Login';
 import Register from './Register';
-import AdminRoute from './admin/index';
+import AdminRoute from './admin';
 import NotFound from './404';
 
 import 'froala-editor/css/froala_style.min.css';
