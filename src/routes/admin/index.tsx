@@ -14,7 +14,7 @@ import BasicForm from './form/Basic';
 import AdvancedForm from './form/Advanced';
 import Wizard from './form/Wizard';
 import Editor from './form/Editor';
-import CustomIndex from './customer/index';
+import CustomIndex from './customer';
 
 type NavItem = {
     label: string;

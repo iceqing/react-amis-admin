@@ -5,8 +5,7 @@ const apiMocker = require("mocker-api");
 
 module.exports = {
   entry: {
-    app: "./index.tsx",
-
+    app: "./src/index.tsx",
     "editor.worker": "monaco-editor/esm/vs/editor/editor.worker.js",
     "json.worker": "monaco-editor/esm/vs/language/json/json.worker",
     "css.worker": "monaco-editor/esm/vs/language/css/css.worker",
@@ -54,7 +53,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js", ".html"],
+    alias: {
+      "@": path.resolve(__dirname, "./src")
+    }
   },
   devtool: "inline-source-map",
   devServer: {
@@ -69,7 +71,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: "./src/index.html",
       chunks: ['app']
     })
   ],
