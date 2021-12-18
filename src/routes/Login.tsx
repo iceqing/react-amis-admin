@@ -24,12 +24,12 @@ const schema = {
     messages: {
         saveSuccess: '登录成功，欢迎光临！'
     },
-    controls: [
+    body: [
         {
             children: (props:any) => (
                 <div className="list-group list-group-sm">
                     {props.renderFormItems({
-                        controls: [
+                        body: [
                             {
                                 name: 'username',
                                 children: (props:any) => (
@@ -77,7 +77,7 @@ const schema = {
 // @ts-ignore
 @withRouter
 @observer
-export default class LoginRoute extends React.Component<LoginProps> {
+export default class LoginRoute extends React.Component<LoginProps, any> {
     handleFormSaved = (value:any) => {
         const store = this.props.store;
         const history = this.props.history;
