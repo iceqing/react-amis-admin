@@ -19,3 +19,5 @@ https://github.com/aisuda/amis-admin
 https://github.com/aisuda/amis-react-starter
 
 https://github.com/PanJiaChen/vue-element-admin
+
+https://baidu.gitee.io/amis/examples/index
