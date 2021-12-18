@@ -3,3 +3,5 @@
 /package-lock.json
 /gh-pages
 /dist
+.idea/
+*.iml

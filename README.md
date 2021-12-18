@@ -1,15 +1,21 @@
-AMis Boilerplate
-==========================
+# react-amis-admin
 
-基于 [AMis](https://github.com/baidu/amis) 渲染器，快速搭建自己的管理系统。
+> 本仓库主要目的在于提供一个开箱可用的amis开发环境，更方便的使用低代码框架`amis`
 
-## 快速开始
 
-```bash
-# 打开服务
+## 使用方法
+
+```
+npm i
 npm start
 ```
 
-## 注意
+本仓库灵感来自于以下几个仓库：
 
-Editor 渲染器用到了 monaco-editor, 需要额外生成 worker 版本。 请参考文档：https://github.com/microsoft/monaco-editor/blob/master/docs/integrate-esm.md#option-2-using-plain-webpack
+https://github.com/baidu/amis
+
+https://github.com/aisuda/amis-admin
+
+https://github.com/aisuda/amis-react-starter
+
+https://github.com/PanJiaChen/vue-element-admin
