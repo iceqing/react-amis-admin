@@ -18,8 +18,8 @@
   "author": "fex",
   "license": "MIT",
   "dependencies": {
-    "amis": "^1.0.8-beta.42",
-    "axios": "^0.18.0",
+    "amis": "^1.5.3",
+    "axios": "^0.24.0",
     "bootstrap": "^3.4.1",
     "copy-to-clipboard": "3.0.8",
     "core-js": "^2.5.7",
@@ -33,7 +33,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "4.2.0",
-    "react-router-dom": "4.2.2"
+    "react-router-dom": "4.2.2",
+    "@fortawesome/fontawesome-free": "^5.15.4"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.123",
