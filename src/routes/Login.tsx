@@ -37,9 +37,9 @@ const schema = {
                                         <input 
                                             placeholder="用户名"
                                             type="text" 
-                                            className="form-control no-shadow no-border" 
-                                            value={props.value || ''} 
-                                            onChange={(e) => props.onChange(e.currentTarget.value)} 
+                                            className="form-control no-shadow no-border"
+                                            // value={props.value || ''}
+                                            // onChange={(e) => props.onChange(e.currentTarget.value)}
                                         />
                                     </div>
                                 )
@@ -51,9 +51,9 @@ const schema = {
                                         <input 
                                             placeholder="密码"    
                                             type="password" 
-                                            className="form-control no-shadow no-border" 
-                                            value={props.value || ''} 
-                                            onChange={(e) => props.onChange(e.currentTarget.value)} 
+                                            className="form-control no-shadow no-border"
+                                            // value={props.value || ''}
+                                            // onChange={(e) => props.onChange(e.currentTarget.value)}
                                         />
                                     </div>
                                 )

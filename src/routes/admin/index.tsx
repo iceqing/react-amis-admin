@@ -146,19 +146,19 @@ export default class Admin extends React.Component<AdminProps, any> {
 
         return (
             <div>
-                <div className={`a-Layout-brandBar`}>
+                <div className={`cxd-Layout-brandBar`}>
                     <button
                         onClick={store.toggleOffScreen}
                         className="pull-right visible-xs"
                     >
                         <i className="glyphicon glyphicon-align-justify"></i>
                     </button>
-                    <div className={`a-Layout-brand`}>
+                    <div className={`cxd-Layout-brand`}>
                         <i className="fa fa-paw"></i>
-                        <span className="hidden-folded m-l-sm">AMis Boilerplate</span>
+                        <span className="hidden-folded m-l-sm">react-amis-admin</span>
                     </div>
                 </div>
-                <div className={`a-Layout-headerBar`}>
+                <div className={`cxd-Layout-headerBar`}>
                     <div className="nav navbar-nav hidden-xs">
                         <Button
                             level="link"
