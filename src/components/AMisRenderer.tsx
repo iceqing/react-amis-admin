@@ -18,7 +18,7 @@ interface RendererProps {
 // @ts-ignore
 @withRouter
 @observer
-export default class AMisRenderer extends React.Component<RendererProps> {
+export default class AMisRenderer extends React.Component<RendererProps, any> {
     env:any = null;
     
     handleAction = (e:any, action:Action) => {
