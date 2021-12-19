@@ -140,7 +140,7 @@ export interface AdminProps extends RouteComponentProps<any>  {
 
 @inject("store")
 @observer
-export default class Admin extends React.Component<AdminProps> {
+export default class Admin extends React.Component<AdminProps, any> {
     renderHeader() {
         const store = this.props.store;
 
