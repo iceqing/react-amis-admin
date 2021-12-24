@@ -14,12 +14,6 @@ import NotFound from './404';
 import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 
-let ContextPath = '';
-
-// gh-pages 环境时
-if (process.env.NODE_ENV === 'production') {
-    ContextPath = '/amis-admin'
-}
 
 export default observer(function({store}:{
     store:IMainStore
@@ -30,12 +24,11 @@ export default observer(function({store}:{
                 <ToastComponent key="toast" position={'top-right'} theme={store.theme} />
                 <AlertComponent key="alert" theme={store.theme} />
                 <Switch>
-                    <Redirect to={`${ContextPath}/login`} from={`${ContextPath}/`} exact />
-                    <Route path={`${ContextPath}/login`} exact component={Login} />
-                    <Route path={`${ContextPath}/register`} exact component={Register} />
+                    <Route path={`/login`} exact component={Login} />
+                    <Route path={`/register`} exact component={Register} />
                     
                     {store.user.isAuthenticated ? (
-                        <Route path={`${ContextPath}/admin`} component={AdminRoute} />
+                        <Route path={''} component={AdminRoute} />
                     ) : (
                         <Route path="*" exact component={Login} />
                     )}

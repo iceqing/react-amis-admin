@@ -10,6 +10,12 @@
       "noImplicitAny": true,
       "strictNullChecks": true,
       "experimentalDecorators":true,
-      "emitDecoratorMetadata": true
-    }
+      "emitDecoratorMetadata": true,
+      "baseUrl": "./",
+      "paths": {
+        // 根据别名配置相关路径
+        "@/*": ["./src/*"]
+      }
+    },
+
   }
