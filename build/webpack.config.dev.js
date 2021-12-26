@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const apiMocker = require("mocker-api");
 
+
 module.exports = {
+  mode: "development",
+  context: path.resolve(__dirname, '../'),
   entry: {
     app: "./src/index.tsx",
     "editor.worker": "monaco-editor/esm/vs/editor/editor.worker.js",
@@ -55,12 +58,12 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".html"],
     alias: {
-      "@": path.resolve(__dirname, "./src/")
+      "@": path.resolve(__dirname, "..", "src")
     }
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist",
+    contentBase: "../dist",
     historyApiFallback: {
       rewrites: [{ from: /^\/(login|admin.*)$/, to: "/index.html" }]
     },
@@ -71,13 +74,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "../src/index.html",
       chunks: ['app']
     })
   ],
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
     publicPath: '/'
   }
 };
