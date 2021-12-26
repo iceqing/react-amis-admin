@@ -9,31 +9,35 @@ import CustomIndex from '@/routes/admin/customer';
 
 const path2components = [
     {
-        path: 'dashboard',
+        path: '/',
         component: Dashboard
     },
     {
-        path: 'form/basic',
+        path: '/dashboard',
+        component: Dashboard
+    },
+    {
+        path: '/form/basic',
         component: BasicForm
     },
     {
-        path: 'form/basic/advanced',
+        path: '/form/basic/advanced',
         component: Advanced
     },
     {
-        path: 'form/advanced',
+        path: '/form/advanced',
         component: Advanced
     },
     {
-        path: 'form/wizard',
+        path: '/form/wizard',
         component: Wizard
     },
     {
-        path: 'form/editor',
+        path: '/form/editor',
         component: Editor
     },
     {
-        path: 'customer/index',
+        path: '/customer/index',
         component: CustomIndex
     }
 ]
