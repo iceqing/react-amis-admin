@@ -56,7 +56,7 @@ export default class Admin extends React.Component<AdminProps, any> {
                         <span className="hidden-folded m-l-sm">react-amis-admin</span>
                     </div>
                 </div>
-                <div className={`cxd-Layout-headerBar`}>
+                <div className={`cxd-Layout-headerBar`} >
                     <div className="nav navbar-nav hidden-xs">
                         <Button
                             level="link"
@@ -66,14 +66,16 @@ export default class Admin extends React.Component<AdminProps, any> {
                             placement="bottom"
                             iconOnly
                         >
-                            <i className={store.asideFolded ? 'fa fa-indent' : 'fa fa-dedent'}/>
+                            <i className={store.asideFolded ? 'fa fa-indent' : 'fa fa-outdent'}/>
                         </Button>
                     </div>
 
-                    <div className="hidden-xs p-t-sm pull-right">
+                    <div className="m-l-auto hidden-xs pull-right p-t-sm">
                         <UserInfo user={store.user}/>
                     </div>
                 </div>
+
+
             </div>
         );
     }

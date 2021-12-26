@@ -5,14 +5,18 @@
 
 
 TODO
-1、支持命令行或者界面创建项目
-2、创建示例网站
-3、菜单栏设置从接口获取
+
+- [x] 创建示例网站
+- [x] 菜单栏设置从接口获取
+- [ ] 支持命令行或者界面创建项目
 
 
 ## 使用方法
 建议使用node版本 node 14
 
+
+图标网站：
+https://fontawesome.com/v5.15/icons?d=listing&p=2&s=solid&m=free
 
 ```
 npm i

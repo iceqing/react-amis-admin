@@ -50,7 +50,7 @@ export default class UserInfo extends React.Component<UserInfoProps, UserInfoSta
                         <span><i className="iconfont icon-admin" /></span>
                         <i className="on md b-white bottom" />
                     </span>
-                    <span className="hidden-sm hidden-md">{user.name}</span>
+                    <span className="hidden-sm">admin</span>
                     <b className="caret" />
                 </span>
             </div>

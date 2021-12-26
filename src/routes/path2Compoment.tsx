@@ -1,12 +1,12 @@
 import * as React from "react";
-import Dashboard from "./admin/Dashboard";
-import BasicForm from '@/routes/admin/form/Basic'
-import Advanced from "./admin/form/Advanced";
-import Wizard from "./admin/form/Wizard";
-import Editor from "./admin/form/Editor";
-import CustomIndex from '@/routes/admin/customer';
-import Login from './Login';
-import Register from './Register';
+import Dashboard from "../pages/admin/Dashboard";
+import BasicForm from '@/pages/admin/form/Basic'
+import Advanced from "../pages/admin/form/Advanced";
+import Wizard from "../pages/admin/form/Wizard";
+import Editor from "../pages/admin/form/Editor";
+import CustomIndex from '@/pages/admin/customer';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 
 const path2components = [
     {
