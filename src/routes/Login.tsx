@@ -1,4 +1,3 @@
-import filter = require('lodash/filter');
 import * as React from 'react';
 import AMisRenderer from '../components/AMisRenderer';
 import { inject, observer } from 'mobx-react';
@@ -7,14 +6,9 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 let ContextPath = '';
 
-// gh-pages 环境时
-if (process.env.NODE_ENV === 'production') {
-    ContextPath = '/amis-admin'
-}
-
 interface LoginProps extends RouteComponentProps<any> {
     store: IMainStore;
-};
+}
 
 const schema = {
     type: 'form',
@@ -81,9 +75,9 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
     handleFormSaved = (value:any) => {
         const store = this.props.store;
         const history = this.props.history;
-        
         store.user.login(value.username);
-        history.replace(`${ContextPath}/admin`)
+        console.log("replace history to dashboard")
+        history.replace(`/dashboard`)
     }
     
     render() {

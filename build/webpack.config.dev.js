@@ -6,7 +6,6 @@ const apiMocker = require("mocker-api");
 
 module.exports = {
   mode: "development",
-  context: path.resolve(__dirname, '../'),
   entry: {
     app: "./src/index.tsx",
     "editor.worker": "monaco-editor/esm/vs/editor/editor.worker.js",
@@ -63,10 +62,9 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "../dist",
-    historyApiFallback: {
-      rewrites: [{ from: /^\/(login|admin.*)$/, to: "/index.html" }]
-    },
+    contentBase: "./dist",
+    historyApiFallback: true,
+    open: true,
     before(app) {
       apiMocker(app, path.resolve("./mocker/index.js"));
     }
@@ -74,7 +72,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "../src/index.html",
+      template: "./src/index.html",
       chunks: ['app']
     })
   ],
