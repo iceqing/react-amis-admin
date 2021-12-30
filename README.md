@@ -27,6 +27,8 @@ npm i
 npm start
 ```
 
+## 参考
+
 本仓库灵感来自于以下几个仓库：
 
 https://github.com/baidu/amis
