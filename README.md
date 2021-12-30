@@ -8,7 +8,9 @@
 
 演示网站：https://amis.iceq.cc/form/advanced
 
+`Amis`官方文档： https://baidu.github.io/amis/zh-CN/docs/index
 
+`Amis`官方可视化编辑器： https://aisuda.github.io/amis-editor-demo/#/hello-world
 
 
 ## TODO
