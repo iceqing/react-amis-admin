@@ -22,10 +22,6 @@
 ## 使用方法
 建议使用node版本 node 14
 
-
-图标网站：
-https://fontawesome.com/v5.15/icons?d=listing&p=2&s=solid&m=free
-
 ```
 npm i
 npm start
@@ -42,3 +38,8 @@ https://github.com/aisuda/amis-react-starter
 https://github.com/PanJiaChen/vue-element-admin
 
 https://baidu.gitee.io/amis/examples/index
+
+## 其他
+
+图标网站：
+https://fontawesome.com/v5.15/icons?d=listing&p=2&s=solid&m=free
