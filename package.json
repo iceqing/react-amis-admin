@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "amis": "^1.5.3",
+    "amis": "^1.6.0",
     "axios": "^0.24.0",
     "bootstrap": "^3.4.1",
     "copy-to-clipboard": "3.0.8",
