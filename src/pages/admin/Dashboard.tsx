@@ -33,11 +33,11 @@ const schema = {
                 {
                     "type": "card",
                     "name": "browser",
-                    href: "http://amis.iceq.cc/",
+                    href: "https://amis.iceq.cc/",
                     "header": {
                         "title": "演示",
                     },
-                    "body": "项目演示地址: http://amis.iceq.cc/"
+                    "body": "项目演示地址: https://amis.iceq.cc/"
                 }
             ]
         },
