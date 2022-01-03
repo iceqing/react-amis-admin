@@ -6,7 +6,7 @@
 
 项目源码：https://github.com/iceqing/react-amis-admin
 
-演示网站：https://amis.iceq.cc/form/advanced
+演示网站：https://amis.iceq.cc
 
 `Amis`官方文档： https://baidu.github.io/amis/zh-CN/docs/index
 
@@ -18,6 +18,8 @@
 - [x] 菜单栏设置从接口获取
 - [ ] 支持命令行或者界面创建项目
 - [ ] 创建网站图标
+- [ ] 使用docsify创建在线文档
+- [ ] 写博客推广`amis`
 
 
 ## 使用方法
