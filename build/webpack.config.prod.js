@@ -60,15 +60,6 @@ module.exports = {
       "@": path.resolve(__dirname, "..", "src")
     }
   },
-  devServer: {
-    contentBase: "../dist",
-    historyApiFallback: {
-      rewrites: [{ from: /^\/(login|admin.*)$/, to: "/index.html" }]
-    },
-    before(app) {
-      apiMocker(app, path.resolve("./mocker/index.js"));
-    }
-  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
