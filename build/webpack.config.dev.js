@@ -66,7 +66,7 @@ module.exports = {
     historyApiFallback: true,
     open: true,
     before(app) {
-      apiMocker(app, path.resolve("./mocker/index.js"));
+      apiMocker(app, path.resolve("./mock/index.js"));
     }
   },
   plugins: [
