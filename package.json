@@ -1,6 +1,6 @@
 {
   "name": "react-amis-admin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "基于 amis 的项目模板",
   "main": "./src/index.tsx",
   "scripts": {
@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "amis": "^1.6.0",
+    "amis": "^1.6.3",
     "axios": "^0.24.0",
     "bootstrap": "^3.4.1",
     "copy-to-clipboard": "3.0.8",
