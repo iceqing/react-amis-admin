@@ -1,12 +1,19 @@
 # react-amis-admin
 
-> 本仓库主要目的在于提供一个开箱可用的`Amis`低代码开发环境，为了方便复杂页面的开发， 
-> 可选支持antd等组件来定制复杂页面，本工程不包含后端代码，前后端分离。
+> 本仓库主要目的在于提供一个开箱可用的`Amis` + `React` 低代码开发环境。支持Amis低代码, 同时支持React原生方式开发或者可选支持antd等组件来定制复杂页面，本工程不包含后端代码，前后端分离。
 
 
 项目源码：https://github.com/iceqing/react-amis-admin
-
 演示网站：https://amis.iceq.cc
+
+## 使用方法
+```
+npm i
+npm start
+```
+
+
+## Amis文档
 
 `Amis`官方文档： https://baidu.github.io/amis/zh-CN/docs/index
 
@@ -22,11 +29,6 @@
 - [ ] 写博客推广`amis`
 
 
-## 使用方法
-```
-npm i
-npm start
-```
 
 ## 参考
 
