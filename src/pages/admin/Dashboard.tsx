@@ -13,6 +13,10 @@ const schema = {
             {
                 "projectName": "项目演示",
                 "projectUrl": "http://amis.iceq.cc/",
+            },
+            {
+                "projectName": "Amis文档",
+                "projectUrl": "https://baidu.github.io/amis/zh-CN/docs/index",
             }
         ]
     },
@@ -25,10 +29,10 @@ const schema = {
                     "type": "card",
                     "name": "browser",
                     "header": {
-                        "title": "源码",
+                        "title": "项目源码",
                     },
                     href: "https://github.com/iceqing/react-amis-admin",
-                    "body": "项目源码：https://github.com/iceqing/react-amis-admin"
+                    "body": "https://github.com/iceqing/react-amis-admin"
                 },
                 {
                     "type": "card",
@@ -38,6 +42,15 @@ const schema = {
                         "title": "演示",
                     },
                     "body": "项目演示地址: https://amis.iceq.cc/"
+                },
+                {
+                    "type": "card",
+                    "name": "browser",
+                    href: "https://baidu.github.io/amis/zh-CN/docs/index",
+                    "header": {
+                        "title": "Amis文档",
+                    },
+                    "body": "https://baidu.github.io/amis/zh-CN/docs/index"
                 }
             ]
         },
