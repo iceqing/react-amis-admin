@@ -8,7 +8,7 @@ import {
 
 export default class RouterGuard extends React.Component<any, any> {
     componentDidMount() {
-
+        this.refreshRoute()
     }
 
     state = {
@@ -17,7 +17,12 @@ export default class RouterGuard extends React.Component<any, any> {
     }
 
     componentDidUpdate(prevProps: Readonly<any>, prevState: Readonly<any>, snapshot?: any) {
+        this.refreshRoute()
+    }
+
+    refreshRoute = () => {
         const pathname = this.props.location.pathname;
+        console.log("pathname is ", pathname)
         if (this.state.pathname != pathname) {
             this.setState({'pathname': pathname});
             let path2ComponentItem = path2components.find(v => {
@@ -35,6 +40,7 @@ export default class RouterGuard extends React.Component<any, any> {
             }
         }
     }
+
 
     render() {
         return (
