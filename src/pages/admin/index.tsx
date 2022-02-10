@@ -9,7 +9,7 @@ import {
 import {IMainStore} from '../../stores';
 import {inject, observer} from 'mobx-react';
 import UserInfo from '../../components/UserInfo';
-import axios from "axios";
+import {request} from '@/utils/requestInterceptor';
 import RouterGuard from "@/routes/RouterGuard";
 
 type NavItem = {
@@ -86,13 +86,13 @@ export default class Admin extends React.Component<AdminProps, any> {
     }
 
     componentDidMount() {
-        axios.request({
+        request({
             method: "get",
             url: '/api/menus'
-        }).then(res => {
+        }).then((res:any) => {
             console.log("res:", res);
             this.setState({
-                    "navigations": res.data
+                    "navigations": res.data.data
                 }
             )
         })

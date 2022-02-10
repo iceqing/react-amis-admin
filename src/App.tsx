@@ -10,6 +10,7 @@ import { MainStore } from './stores';
 import * as copy from 'copy-to-clipboard';
 import RootRoute from './routes';
 import './utils/polyfill';
+import {request} from './utils/requestInterceptor';
 
 // css
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -53,8 +54,8 @@ export default function():JSX.Element {
             }
 
             data && (config.data = data);
-
-            return axios(url, config);
+            config.url = url;
+            return request(config);
         },
         isCancel: (e:any) => axios.isCancel(e),
         notify: (type: 'success' | 'error' | 'info', msg: string) => {
