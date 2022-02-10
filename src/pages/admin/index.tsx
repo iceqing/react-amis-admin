@@ -85,17 +85,21 @@ export default class Admin extends React.Component<AdminProps, any> {
         navigations: []
     }
 
-    componentDidMount() {
-        request({
-            method: "get",
-            url: '/api/menus'
-        }).then((res:any) => {
-            console.log("res:", res);
-            this.setState({
-                    "navigations": res.data.data
-                }
-            )
-        })
+    componentDidUpdate() {
+        let pathname = this.props.location.pathname;
+        console.log("location:", pathname)
+        if (pathname != 'login' && pathname != '/') {
+            request({
+                method: "get",
+                url: '/api/menus'
+            }).then((res:any) => {
+                console.log("res:", res);
+                this.setState({
+                        "navigations": res.data.data
+                    }
+                )
+            })
+        }
     }
 
 
