@@ -44,7 +44,29 @@ const schema = {
             "columns": [
                 {
                     "type": "chart",
-                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chart?name=$name&starttime=${starttime}&endtime=${endtime}"
+                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chartData",
+                    "config": {
+                        "xAxis": {
+                            "type": "category",
+                            "data": [
+                                "Mon",
+                                "Tue",
+                                "Wed",
+                                "Thu",
+                                "Fri",
+                                "Sat"
+                            ]
+                        },
+                        "yAxis": {
+                            "type": "value"
+                        },
+                        "series": [
+                            {
+                                "data": "${line}",
+                                "type": "line"
+                            }
+                        ]
+                    }
                 },
                 {
                     "type": "chart",
@@ -56,6 +78,11 @@ const schema = {
             "type": "grid",
             "className": "m-t-lg",
             "columns": [
+                {
+                    "type": "chart",
+                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chart",
+                    "interval": 5000
+                },
                 {
                     "type": "chart",
                     "config": {
@@ -129,32 +156,6 @@ const schema = {
                             {
                                 "type": "bar",
                                 "seriesLayoutBy": "row"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "type": "chart",
-                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chartData",
-                    "config": {
-                        "xAxis": {
-                            "type": "category",
-                            "data": [
-                                "Mon",
-                                "Tue",
-                                "Wed",
-                                "Thu",
-                                "Fri",
-                                "Sat"
-                            ]
-                        },
-                        "yAxis": {
-                            "type": "value"
-                        },
-                        "series": [
-                            {
-                                "data": "${line}",
-                                "type": "line"
                             }
                         ]
                     }
