@@ -56,7 +56,7 @@ export default class Admin extends React.Component<AdminProps, any> {
                         <span className="hidden-folded m-l-sm">react-amis-admin</span>
                     </div>
                 </div>
-                <div className={`cxd-Layout-headerBar`} >
+                <div className={`cxd-Layout-headerBar`}>
                     <div className="nav navbar-nav hidden-xs">
                         <Button
                             level="link"
@@ -97,7 +97,6 @@ export default class Admin extends React.Component<AdminProps, any> {
             )
         })
     }
-
 
 
     renderAside() {
@@ -162,18 +161,28 @@ export default class Admin extends React.Component<AdminProps, any> {
         const store = this.props.store;
         let pathname = this.props.location.pathname;
         console.log("location:", pathname)
-        return (
-            <Layout
-                aside={this.renderAside()}
-                header={this.renderHeader()}
-                folded={store.asideFolded}
-                offScreen={store.offScreen}
-            >
+        if (pathname == 'login' || pathname == '/') {
+            return (
                 <Switch>
-                    <RouterGuard />
+                    <RouterGuard/>
                     <Redirect to={`/404`}/>
                 </Switch>
-            </Layout>
-        );
+            )
+        } else {
+            return (
+                <Layout
+                    aside={this.renderAside()}
+                    header={this.renderHeader()}
+                    folded={store.asideFolded}
+                    offScreen={store.offScreen}
+                >
+                    <Switch>
+                        <RouterGuard/>
+                        <Redirect to={`/404`}/>
+                    </Switch>
+                </Layout>
+            );
+        }
+
     }
 }
