@@ -7,6 +7,7 @@ import Editor from "../pages/admin/form/Editor";
 import CustomIndex from '@/pages/admin/customer';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import Hello from "@/pages/Hello";
 
 const path2components = [
     {
@@ -48,6 +49,10 @@ const path2components = [
     {
         path: '/customer/index',
         component: CustomIndex
+    },
+    {
+        path: '/hello',
+        component: Hello
     }
 ]
 
