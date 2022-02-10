@@ -32,7 +32,7 @@ const schema = {
                                             placeholder="用户名"
                                             type="text"
                                             className="form-control no-shadow no-border"
-                                            value={props.value || 'admin'}
+                                            value={props.value}
                                             onChange={(e) => props.onChange(e.currentTarget.value)}
                                         />
                                     </div>
@@ -46,7 +46,6 @@ const schema = {
                                             placeholder="密码"
                                             type="password"
                                             className="form-control no-shadow no-border"
-                                            value={props.value || ''}
                                             onChange={(e) => props.onChange(e.currentTarget.value)}
                                         />
                                     </div>
@@ -75,6 +74,7 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
     handleFormSaved = (value: any) => {
         const store = this.props.store;
         const history = this.props.history;
+        console.log("### value is ", value)
         if (value.username != null) {
             store.user.login(value.username);
         } else {

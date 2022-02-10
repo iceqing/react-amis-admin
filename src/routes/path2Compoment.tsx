@@ -11,7 +11,7 @@ import Register from '../pages/Register';
 const path2components = [
     {
         path: '/',
-        component: Dashboard
+        component: Login
     },
     {
         path: '/login',
