@@ -7,3 +7,4 @@
 *.iml
 build/dist/
 dist.tar.gz
+/deploy.sh
