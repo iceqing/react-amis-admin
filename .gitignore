@@ -8,3 +8,5 @@
 build/dist/
 dist.tar.gz
 /deploy.sh
+/deploy-docs.sh
+/docs.tar.gz
