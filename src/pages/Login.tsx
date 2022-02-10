@@ -18,7 +18,7 @@ export default class LoginRoute extends React.Component<any, any> {
         // 这里可以进行登陆密码验证
         axios.request({
             method: "post",
-            url: "/api/form/save"
+            url: "/api/login"
         }).then(res => {
             console.log("login res", res);
             if (res.data != null && res.data.status === 0) {

@@ -4,22 +4,6 @@ import schema2component from "../../utils/schema2component";
 const schema = {
     type: 'page',
     title: 'Dashboard',
-    data: {
-        items: [
-            {
-                "projectName": "项目源码",
-                "projectUrl": "https://github.com/iceqing/react-amis-admin",
-            },
-            {
-                "projectName": "项目演示",
-                "projectUrl": "http://amis.iceq.cc/",
-            },
-            {
-                "projectName": "Amis文档",
-                "projectUrl": "https://baidu.github.io/amis/zh-CN/docs/index",
-            }
-        ]
-    },
     body: [
         {
             "type": "grid",
@@ -39,9 +23,9 @@ const schema = {
                     "name": "browser",
                     href: "https://amis.iceq.cc/",
                     "header": {
-                        "title": "演示",
+                        "title": "项目演示地址",
                     },
-                    "body": "项目演示地址: https://amis.iceq.cc/"
+                    "body": "https://amis.iceq.cc/"
                 },
                 {
                     "type": "card",
