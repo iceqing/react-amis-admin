@@ -21,6 +21,7 @@ export const User = types
             logout() {
                 localStorage.setItem('authenticated', '');
                 self.name = '';
+                console.log("logout finished!")
             },
             afterCreate() {
                 self.name = localStorage.getItem('authenticated') || '';

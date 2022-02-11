@@ -89,7 +89,7 @@ export default class Admin extends React.Component<AdminProps, any> {
 
     logout= ()=> {
         const store = this.props.store;
-        store.user.logout
+        store.user.logout()
         const history = this.props.history;
         history.replace(`/login`)
     }
