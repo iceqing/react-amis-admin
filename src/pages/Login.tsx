@@ -52,6 +52,12 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
         })
     }
 
+    componentDidMount() {
+        const store = this.props.store;
+        console.log("store.user.name", store.user.name)
+        console.log("store.user.isAuthenticated", store.user.isAuthenticated)
+    }
+
     handleChangeForUsername = (e: any) => {
         this.setState({
             inputUsername: e.target.value

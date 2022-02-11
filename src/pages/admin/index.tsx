@@ -72,7 +72,7 @@ export default class Admin extends React.Component<AdminProps, any> {
                     </div>
 
                     <div className="m-l-auto hidden-xs pull-right p-t-sm">
-                        <UserInfo user={store.user}/>
+                        <span>{store.user.name}</span><span className={'btn btn-link'} onClick={this.logout}>[退出]</span>
                     </div>
                 </div>
 
@@ -87,6 +87,13 @@ export default class Admin extends React.Component<AdminProps, any> {
         navigations: []
     }
 
+    logout= ()=> {
+        const store = this.props.store;
+        store.user.logout
+        const history = this.props.history;
+        history.replace(`/login`)
+    }
+
     componentDidMount() {
         const store = this.props.store;
         const history = this.props.history;
@@ -97,15 +104,11 @@ export default class Admin extends React.Component<AdminProps, any> {
         }
     }
     componentDidUpdate() {
-        const history = this.props.history;
         const store = this.props.store;
         let pathname = this.props.location.pathname;
         console.log("location:", pathname)
         console.log("store.user:", store.user)
 
-        if (!store.user.isAuthenticated) {
-            history.replace(`/login`)
-        }
         if (pathname != 'login' && pathname != '/' &&
             !this.state.hasLoadMenu &&
             store.user.isAuthenticated

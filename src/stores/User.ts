@@ -19,6 +19,7 @@ export const User = types
                 self.name = username;
             },
             logout() {
+                localStorage.setItem('authenticated', '');
                 self.name = '';
             },
             afterCreate() {
