@@ -6,11 +6,12 @@ import {
     AsideNav,
     Spinner
 } from 'amis';
-import {IMainStore} from '../../stores';
+import {IMainStore} from '@/stores';
 import {inject, observer} from 'mobx-react';
 import UserInfo from '../../components/UserInfo';
 import {request} from '@/utils/requestInterceptor';
 import RouterGuard from "@/routes/RouterGuard";
+import {toast} from "amis";
 
 type NavItem = {
     label: string;
@@ -82,20 +83,41 @@ export default class Admin extends React.Component<AdminProps, any> {
 
     state = {
         pathname: '',
+        hasLoadMenu: false,
         navigations: []
     }
 
+    componentDidMount() {
+        const store = this.props.store;
+        const history = this.props.history;
+        console.log("componentDidMount, store.user:", store.user)
+        if (!store.user.isAuthenticated) {
+            toast['error']('用户未登陆，请先登陆！', '消息')
+            history.replace(`/login`)
+        }
+    }
     componentDidUpdate() {
+        const history = this.props.history;
+        const store = this.props.store;
         let pathname = this.props.location.pathname;
         console.log("location:", pathname)
-        if (pathname != 'login' && pathname != '/') {
+        console.log("store.user:", store.user)
+
+        if (!store.user.isAuthenticated) {
+            history.replace(`/login`)
+        }
+        if (pathname != 'login' && pathname != '/' &&
+            !this.state.hasLoadMenu &&
+            store.user.isAuthenticated
+        ) {
             request({
                 method: "get",
                 url: '/api/menus'
             }).then((res:any) => {
                 console.log("res:", res);
                 this.setState({
-                        "navigations": res.data.data
+                        "navigations": res.data.data,
+                         "hasLoadMenu":true
                     }
                 )
             })
