@@ -87,7 +87,7 @@ export default class Admin extends React.Component<AdminProps, any> {
         navigations: []
     }
 
-    logout= ()=> {
+    logout = () => {
         const store = this.props.store;
         store.user.logout()
         const history = this.props.history;
@@ -102,13 +102,18 @@ export default class Admin extends React.Component<AdminProps, any> {
             toast['error']('用户未登陆，请先登陆！', '消息')
             history.replace(`/login`)
         }
+        this.refreshMenu()
     }
+
     componentDidUpdate() {
+        this.refreshMenu()
+    }
+
+    refreshMenu = () => {
         const store = this.props.store;
         let pathname = this.props.location.pathname;
         console.log("location:", pathname)
         console.log("store.user:", store.user)
-
         if (pathname != 'login' && pathname != '/' &&
             !this.state.hasLoadMenu &&
             store.user.isAuthenticated
@@ -116,11 +121,11 @@ export default class Admin extends React.Component<AdminProps, any> {
             request({
                 method: "get",
                 url: '/api/menus'
-            }).then((res:any) => {
+            }).then((res: any) => {
                 console.log("res:", res);
                 this.setState({
                         "navigations": res.data.data,
-                         "hasLoadMenu":true
+                        "hasLoadMenu": true
                     }
                 )
             })
