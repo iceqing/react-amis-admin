@@ -3,8 +3,20 @@ import axios from "axios";
 import {
     toast,
 } from 'amis';
+import {RouteComponentProps} from "react-router-dom";
+import {IMainStore} from "@/stores";
+import {inject, observer} from "mobx-react";
+import {withRouter} from "react-router";
 
-export default class LoginRoute extends React.Component<any, any> {
+interface LoginProps extends RouteComponentProps<any> {
+    store: IMainStore;
+}
+
+@inject("store")
+// @ts-ignore
+@withRouter
+@observer
+export default class LoginRoute extends React.Component<LoginProps, any> {
 
     state = {
         inputUsername: 'admin',
@@ -13,6 +25,7 @@ export default class LoginRoute extends React.Component<any, any> {
 
     handleFormSaved = (value: any) => {
         const history = this.props.history;
+        const store = this.props.store;
         console.log("inputUsername:", this.state.inputUsername)
         console.log("inputPassword:", this.state.inputPassword)
         // 这里可以进行登陆密码验证
@@ -22,6 +35,7 @@ export default class LoginRoute extends React.Component<any, any> {
         }).then(res => {
             console.log("login res", res);
             if (res.data != null && res.data.status === 0) {
+                store.user.login(this.state.inputUsername);
                 toast['info']('登陆成功', '消息')
                 // 跳转到dashboard页面
                 console.log("replace history to dashboard, value:", value)
