@@ -13,7 +13,7 @@ const schema = {
                     "type": "card",
                     "name": "browser",
                     "header": {
-                        "title": "项目源码",
+                        "title": "项目源码2",
                     },
                     href: "https://github.com/iceqing/react-amis-admin",
                     "body": "https://github.com/iceqing/react-amis-admin"
