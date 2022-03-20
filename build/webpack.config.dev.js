@@ -1,8 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const apiMocker = require("mocker-api");
-
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin")
 
 module.exports = {
   mode: "development",
@@ -32,7 +32,7 @@ module.exports = {
         use: [
           {
             loader: "style-loader",
-            options: { injectType: "styleTag" }
+            options: {injectType: "styleTag"}
           },
           "css-loader"
         ]
@@ -42,7 +42,7 @@ module.exports = {
         use: [
           {
             loader: "style-loader",
-            options: { injectType: "styleTag" }
+            options: {injectType: "styleTag"}
           },
           "css-loader",
           "sass-loader"
@@ -62,7 +62,9 @@ module.exports = {
   },
   devtool: "inline-source-map",
   devServer: {
+    hot: true,
     contentBase: "./dist",
+    port: 4000,
     historyApiFallback: true,
     open: true,
     before(app) {
@@ -71,6 +73,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       chunks: ['app']
