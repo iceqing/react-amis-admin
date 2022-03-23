@@ -3,7 +3,7 @@ import {
     getEnv
 } from "mobx-state-tree";
 
-export const User = types
+const User = types
     .model('User', {
         name: ''
     })
@@ -28,3 +28,5 @@ export const User = types
             }
         }
     });
+
+export default User;
