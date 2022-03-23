@@ -3,16 +3,19 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const apiMocker = require("mocker-api");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin")
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
+const ReactRefreshTypeScript = require('react-refresh-typescript');
 
-module.exports = {
+module.exports = smp.wrap({
   mode: "development",
   entry: {
     app: "./src/index.tsx",
-    "editor.worker": "monaco-editor/esm/vs/editor/editor.worker.js",
-    "json.worker": "monaco-editor/esm/vs/language/json/json.worker",
-    "css.worker": "monaco-editor/esm/vs/language/css/css.worker",
-    "html.worker": "monaco-editor/esm/vs/language/html/html.worker",
-    "ts.worker": "monaco-editor/esm/vs/language/typescript/ts.worker"
+    // "editor.worker": "monaco-editor/esm/vs/editor/editor.worker.js",
+    // "json.worker": "monaco-editor/esm/vs/language/json/json.worker",
+    // "css.worker": "monaco-editor/esm/vs/language/css/css.worker",
+    // "html.worker": "monaco-editor/esm/vs/language/html/html.worker",
+    // "ts.worker": "monaco-editor/esm/vs/language/typescript/ts.worker"
   },
   module: {
     rules: [
@@ -24,8 +27,18 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/
+        use: [
+          {
+            loader: require.resolve('ts-loader'),
+            options: {
+              getCustomTransformers: () => ({
+                before: [ReactRefreshTypeScript()].filter(Boolean),
+              }),
+              transpileOnly: true,
+            },
+          },
+        ],
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
@@ -46,11 +59,11 @@ module.exports = {
           },
           "css-loader",
           "sass-loader"
-        ]
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"]
+        use: ["file-loader"],
       }
     ]
   },
@@ -63,7 +76,6 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     hot: true,
-    contentBase: "./dist",
     port: 4000,
     historyApiFallback: true,
     open: true,
@@ -78,10 +90,5 @@ module.exports = {
       template: "./src/index.html",
       chunks: ['app']
     })
-  ],
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: '/'
-  }
-};
+  ]
+});
