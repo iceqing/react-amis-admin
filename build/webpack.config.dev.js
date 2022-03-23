@@ -7,7 +7,8 @@ const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const ReactRefreshTypeScript = require('react-refresh-typescript');
 
-module.exports = smp.wrap({
+
+webpackConfig = {
   mode: "development",
   entry: {
     app: "./src/index.tsx",
@@ -91,4 +92,6 @@ module.exports = smp.wrap({
       chunks: ['app']
     })
   ]
-});
+}
+// 打印每个模块的执行速度
+module.exports = smp.wrap(webpackConfig);
