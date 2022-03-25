@@ -8,6 +8,7 @@ import CustomIndex from '@/pages/admin/customer';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Hello from "@/pages/Hello";
+import Simple from "@/pages/admin/dialog/Simple";
 
 const path2components = [
     {
@@ -53,6 +54,10 @@ const path2components = [
     {
         path: '/hello',
         component: Hello
+    },
+    {
+        path: '/dialog/simple',
+        component: Simple
     }
 ]
 
