@@ -92,6 +92,12 @@ webpackConfig = {
       chunks: ['app']
     })
   ]
+  ,
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "../dist"),
+    publicPath: '/'
+  }
 }
 // 打印每个模块的执行速度
 module.exports = smp.wrap(webpackConfig);
