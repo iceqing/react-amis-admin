@@ -24,6 +24,11 @@ module.exports = {
                         icon: 'glyphicon glyphicon-signal',
                     },
                     {
+                        path: '/icon/simple',
+                        label: 'Icon',
+                        icon: 'glyphicon glyphicon-signal',
+                    },
+                    {
                         label: '表单页面',
                         icon: 'glyphicon glyphicon-edit',
                         children: [

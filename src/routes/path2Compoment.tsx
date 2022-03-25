@@ -9,6 +9,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Hello from "@/pages/Hello";
 import Simple from "@/pages/admin/dialog/Simple";
+import Icon from "@/pages/admin/icon/Simple";
 
 const path2components = [
     {
@@ -58,6 +59,10 @@ const path2components = [
     {
         path: '/dialog/simple',
         component: Simple
+    },
+    {
+        path: '/icon/simple',
+        component: Icon
     }
 ]
 

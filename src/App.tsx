@@ -13,7 +13,7 @@ import './utils/polyfill';
 import {request} from './utils/requestInterceptor';
 
 // css
-import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'amis/lib/themes/cxd.css';
 import './scss/style.scss'
