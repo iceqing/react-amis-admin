@@ -99,5 +99,8 @@ webpackConfig = {
     publicPath: '/'
   }
 }
+
+module.exports = webpackConfig;
 // 打印每个模块的执行速度
-module.exports = smp.wrap(webpackConfig);
+// module.exports = smp.wrap(webpackConfig);
+
