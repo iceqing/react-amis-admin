@@ -10,7 +10,24 @@ const schema = {
       body: [
         {
           type: "icon",
-          icon: "user"
+          icon: "user",
+        },
+        {
+          type: "icon",
+          icon: "user",
+          "className": "text-info text-xl"
+        },
+        {
+          type: "divider",
+        },
+        {
+          type: "icon",
+          icon: "cloud",
+        },
+        {
+          type: "icon",
+          icon: "cloud",
+          "className": "text-info text-xl"
         }
       ],
     },
