@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img width="284" src="https://github.com/iceqing/react-amis-admin/raw/master/docs/logo.png">
+    <img width="284" src="https://github.com/iceqing/react-amis-admin/raw/master/docs/logo_react-amid-admin.png">
   </p>
 
 [react-amis-admin在线文档](https://docs.amis.iceq.cc) |
