@@ -34,6 +34,16 @@ module.exports = {
                         ],
                     },
                     {
+                        label: "选项卡",
+                        icon: "fa fa-clone",
+                        children: [
+                            {
+                                label: "常规选项卡",
+                                path: "/tabs",
+                            },
+                        ],
+                    },
+                    {
                         path: "/icon/simple",
                         label: "Icon",
                         icon: "fa fa-th",
