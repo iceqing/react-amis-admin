@@ -10,3 +10,4 @@ dist.tar.gz
 /deploy.sh
 /deploy-docs.sh
 /docs.tar.gz
+.DS_Store
