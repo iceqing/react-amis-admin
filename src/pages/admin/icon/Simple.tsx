@@ -28,6 +28,106 @@ const schema = {
           type: "icon",
           icon: "cloud",
           "className": "text-info text-xl"
+        },
+        {
+          type: "divider",
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-address-book",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-address-book",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-address-book",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-address-book",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-bell",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-bell",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-bell",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-bell",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-plus",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-plus",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-plus",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-plus",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-question-circle",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-question-circle",
+          "vendor": ""
+        },
+        {
+          "type": "icon",
+          "icon": "far fa-question-circle",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "icon",
+          "icon": "fas fa-question-circle",
+          "vendor": "",
+          "className": "text-info text-xl"
         }
       ],
     },
