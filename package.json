@@ -21,7 +21,7 @@
     "react"
   ],
   "author": "iceq",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
     "amis": "^1.8.0",
