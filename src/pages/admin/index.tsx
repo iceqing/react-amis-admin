@@ -8,7 +8,6 @@ import {
 } from 'amis';
 import {IMainStore} from '@/stores';
 import {inject, observer} from 'mobx-react';
-import UserInfo from '../../components/UserInfo';
 import {request} from '@/utils/requestInterceptor';
 import RouterGuard from "@/routes/RouterGuard";
 import {toast} from "amis";
@@ -58,7 +57,7 @@ export default class Admin extends React.Component<AdminProps, any> {
                     </div>
                 </div>
                 <div className={`cxd-Layout-headerBar`}>
-                    <div className="nav navbar-nav hidden-xs">
+                    <div className="nav navbar-nav hidden-xs pull-left">
                         <Button
                             level="link"
                             className="no-shadow navbar-btn"
@@ -71,7 +70,7 @@ export default class Admin extends React.Component<AdminProps, any> {
                         </Button>
                     </div>
 
-                    <div className="m-l-auto hidden-xs pull-right p-t-sm">
+                    <div className="m-l-auto hidden-xs pull-right">
                         <span>{store.user.name}</span><span className={'btn btn-link'} onClick={this.logout}>[退出]</span>
                     </div>
                 </div>

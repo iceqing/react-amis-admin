@@ -16,7 +16,7 @@ module.exports = {
                     {
                         path: "/dashboard",
                         label: "Dashboard",
-                        icon: "glyphicon glyphicon-signal",
+                        icon: "fa fa-gauge",
                     },
                     {
                         path: "/dialog/simple",
@@ -50,7 +50,7 @@ module.exports = {
                     },
                     {
                         label: "表单页面",
-                        icon: "glyphicon glyphicon-edit",
+                        icon: "fas fa-pen-to-square",
                         children: [
                             {
                                 label: "常规表单",
