@@ -49,7 +49,7 @@ export default class Admin extends React.Component<AdminProps, any> {
                         onClick={store.toggleOffScreen}
                         className="pull-right visible-xs"
                     >
-                        <i className="glyphicon glyphicon-align-justify"></i>
+                        <i className="fa fa-bars text-white"></i>
                     </button>
                     <div className={`cxd-Layout-brand`}>
                         <i className="fa fa-paw"></i>
