@@ -128,7 +128,16 @@ const schema = {
           "icon": "fas fa-question-circle",
           "vendor": "",
           "className": "text-info text-xl"
-        }
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-bars",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
       ],
     },
   ],
