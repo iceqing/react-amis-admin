@@ -1,12 +1,5 @@
 import schema2component from "../../../utils/schema2component";
 
-// id: 1,
-// name: '张三',
-// age: 18,
-// tel: '13111011101',
-// gender: 1,
-// company: 'XX XX XX'
-
 const schema = {
     type: 'page',
     title: '会员列表',
@@ -31,6 +24,7 @@ const schema = {
                 }
             ]
         },
+        "footerToolbar": ["statistics", "pagination", "switch-per-page"],
         columns: [
             {
                 name: "id",
