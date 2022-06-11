@@ -16,7 +16,8 @@ import {request} from './utils/requestInterceptor';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'amis/lib/themes/cxd.css';
-import './scss/style.scss';
+import 'amis/lib/themes/cxd.css';
+import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
 
 export default function():JSX.Element {
