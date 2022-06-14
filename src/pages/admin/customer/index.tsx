@@ -24,7 +24,7 @@ const schema = {
                 }
             ]
         },
-        "footerToolbar": ["statistics", "pagination", "switch-per-page"],
+        footerToolbar: ["switch-per-page", "statistics", "pagination"],
         columns: [
             {
                 name: "id",
