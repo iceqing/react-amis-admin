@@ -60,7 +60,8 @@ export default function():JSX.Element {
         },
         isCancel: (e:any) => axios.isCancel(e),
         notify: (type: 'success' | 'error' | 'info', msg: string) => {
-            toast[type] ? toast[type](msg, type === 'error' ? '系统错误' : '系统消息') : console.warn('[Notify]', type, msg);
+            toast[type] ? toast[type](msg,
+                {title:type === 'error' ? '系统错误' : '系统消息', timeout:5000}) : console.warn('[Notify]', type, msg);
             console.log('[notify]', type, msg);
         },
         alert,
