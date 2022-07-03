@@ -1,8 +1,12 @@
 {
   "name": "react-amis-admin",
-  "version": "1.1.2",
+  "version": "1.3.0",
   "description": "基于 amis 的项目模板",
   "main": "./src/index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iceqing/react-amis-admin"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
@@ -17,16 +21,16 @@
     "react"
   ],
   "author": "iceq",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "amis": "^2.0.0",
     "amis-ui": "^2.0.0",
     "amis-core": "^2.0.0",
     "amis-formula": "^2.0.0",
     "antd": "^4.18.6",
     "axios": "^0.24.0",
-    "bootstrap": "^3.4.1",
+    "bootstrap": "^5.1.0",
     "copy-to-clipboard": "3.0.8",
     "core-js": "^2.5.7",
     "lodash": "^4.17.11",
@@ -58,7 +62,7 @@
     "file-loader": "^5.0.2",
     "fs-walk": "0.0.2",
     "html-minifier": "^4.0.0",
-    "html-webpack-plugin": "^4.0.0-beta.9",
+    "html-webpack-plugin": "^4.0.1",
     "mocker-api": "^1.11.2",
     "mockjs": "^1.1.0",
     "sass": "^1.45.2",

@@ -2,6 +2,9 @@
 通过`Amis`只需要写`JSON`(或者根据拖拽生成的`JSON`)即可完成开发一个页面，极大减轻了后台页面前端工作量。
 
 ### 1、首先在pages下新增一个Hello.tsx页面
+
+其中`schema`即amis的JSON代码，具体可以参考 [官方文档](https://baidu.github.io/amis/zh-CN/components/page)
+
 ```tsx
 import schema2component from "@/utils/schema2component";
 

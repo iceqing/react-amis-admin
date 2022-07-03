@@ -1,14 +1,22 @@
-# react-amis-admin
+
+
+<div align="center">
+  <p>
+    <img width="284" src="https://github.com/iceqing/react-amis-admin/raw/master/docs/logo_react-amid-admin.png">
+  </p>
+
+[react-amis-admin在线文档](https://docs.amis.iceq.cc) |
+[演示网站](https://amis.iceq.cc)|
+[项目源码](https://github.com/iceqing/react-amis-admin)|
+[Amis文档](https://baidu.github.io/amis/) |
+[Amis可视化编辑器](https://aisuda.github.io/amis-editor-demo/) 
+</div>
+
 
 > 本仓库主要目的在于提供一个开箱可用的`Amis` + `React` 低代码开发环境。支持Amis低代码, 
 > 同时支持React原生方式开发或者可选支持`Antd`等组件来定制复杂页面，本工程不包含后端代码，前后端分离。
 
 
-[项目源码: https://github.com/iceqing/react-amis-admin](https://github.com/iceqing/react-amis-admin)
-
-[在线文档: https://docs.amis.iceq.cc](https://docs.amis.iceq.cc)
-
-[演示网站: https://amis.iceq.cc](https://amis.iceq.cc) 
 
 ## 使用方法
 ```
@@ -18,9 +26,17 @@ npm start
 即可访问页面
 
 ## 如何新增一个Amis页面？
-通过`Amis`只需要写`JSON`(或者根据拖拽生成的`JSON`)即可完成开发一个页面，极大减轻了后台页面前端工作量。
+
+**如果想阅读更多react-amis-admin开发说明，请参考[在线文档](https://docs.amis.iceq.cc)**
+
+
+
+>通过`Amis`只需要写`JSON`(或者根据拖拽生成的`JSON`)即可完成开发一个页面，极大减轻了后台页面前端工作量。
 
 ### 1、首先在pages下新增一个Hello.tsx页面
+
+其中`schema`即amis的JSON代码，具体可以参考 [官方文档](https://baidu.github.io/amis/zh-CN/components/page)
+
 ```tsx
 import schema2component from "@/utils/schema2component";
 

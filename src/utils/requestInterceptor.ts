@@ -27,8 +27,9 @@ export function request(config: AxiosRequestConfig) {
             }
         }
 
-        let onFail = (res:any) => {
-            console.log("onFail", res)
+        let onFail = (error:any) => {
+            console.log("onFail", error)
+            reject(error);
         }
         return instance.request(config)
             .then(onSuccess, onFail)
