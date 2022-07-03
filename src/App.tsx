@@ -15,7 +15,7 @@ import {request} from './utils/requestInterceptor';
 // css
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import 'amis/lib/themes/cxd.css';
+import 'amis-ui/lib/themes/cxd.css';
 import './scss/style.scss'
 
 export default function():JSX.Element {
