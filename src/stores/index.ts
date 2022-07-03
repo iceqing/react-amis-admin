@@ -2,8 +2,8 @@ import {
     types,
     getEnv
 } from "mobx-state-tree";
-import { User } from "./User";
-export const MainStore = types
+import User  from "./User";
+const MainStore = types
     .model('MainStore', {
         theme: 'cxd',
         user: types.optional(User, {}),
@@ -48,6 +48,6 @@ export const MainStore = types
             }
         };
     });
-
+export {MainStore}
 
 export type IMainStore = typeof MainStore.Type;
