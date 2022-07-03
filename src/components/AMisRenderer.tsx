@@ -20,7 +20,7 @@ interface RendererProps {
 @observer
 export default class AMisRenderer extends React.Component<RendererProps, any> {
     env:any = null;
-    
+
     handleAction = (e:any, action:Action) => {
         this.env.alert(`没有识别的动作：${JSON.stringify(action)}`);
     }
@@ -36,7 +36,7 @@ export default class AMisRenderer extends React.Component<RendererProps, any> {
         const apiHost = getEnv(store).apiHost;
         const getModalContainer = getEnv(store).getModalContainer;
         const history = props.history;
-        
+
         const normalizeLink = (to:string) => {
             if (/^\/api\//.test(to)) {
                 return to;
@@ -126,7 +126,7 @@ export default class AMisRenderer extends React.Component<RendererProps, any> {
             getModalContainer
         };
     }
-    
+
     render() {
         const {
             schema,

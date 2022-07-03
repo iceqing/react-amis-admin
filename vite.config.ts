@@ -19,7 +19,7 @@ export default defineConfig({
         }
         )
     ],
-    base: './src',
+    base: './',
     resolve: {
         extensions: ['.js', '.ts', '.tsx', '.json'],
         alias: [{find: '@', replacement: '/src/'}],
