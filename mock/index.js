@@ -7,6 +7,23 @@ module.exports = {
         status: 0,
         msg: "",
     },
+    "/api/schemaApi/demo1": {
+        status: 0,
+        msg: "",
+        data: {
+            "type": "page",
+            "title": "这个是接口返回的amis JSON 生成的界面",
+            "body": {
+                "label": "弹框",
+                "type": "button",
+                "actionType": "dialog",
+                "dialog": {
+                    "title": "弹框",
+                    "body": "这是个简单的弹框。"
+                }
+            }
+        }
+    },
     "/api/menus": {
         status: 0,
         data: [
@@ -47,6 +64,17 @@ module.exports = {
                         path: "/icon/simple",
                         label: "Icon",
                         icon: "fa fa-th",
+                    },
+                    {
+                        label: "SchemaApi",
+                        icon: "fa fa-th",
+                        children: [
+                          {
+                            path: "/schemaApi/demo1",
+                            label: "渲染接口amis",
+                            icon: "fa fa-th",
+                        }
+                        ]
                     },
                     {
                         label: "表单页面",

@@ -11,6 +11,7 @@ import Hello from "@/pages/Hello";
 import Simple from "@/pages/admin/dialog/Simple";
 import Icon from "@/pages/admin/icon/Simple";
 import Tabs from "@/pages/Tabs";
+import SchemaApiDemo1 from "@/pages/admin/schema/index";
 
 const path2components = [
     {
@@ -68,6 +69,10 @@ const path2components = [
     {
         path: '/tabs',
         component: Tabs
+    },
+    {
+        path: '/schemaApi/demo1',
+        component: SchemaApiDemo1
     }
 ]
 
