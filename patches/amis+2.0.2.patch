@@ -1,0 +1,14 @@
+diff --git a/node_modules/amis/esm/renderers/Chart.js b/node_modules/amis/esm/renderers/Chart.js
+index f1e8b44..c81493a 100644
+--- a/node_modules/amis/esm/renderers/Chart.js
++++ b/node_modules/amis/esm/renderers/Chart.js
+@@ -125,6 +125,9 @@ var Chart = /** @class */ (function (_super) {
+                 import('echarts/extension/bmap/bmap')
+             ]).then(function (_a) {
+                 var echarts = _a[0], ecStat = _a[1];
++                if (ecStat.default!=null) {
++                    ecStat = ecStat.default;
++                }
+                 return __awaiter(_this, void 0, void 0, function () {
+                     var theme;
+                     var _this = this;
