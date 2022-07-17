@@ -13,6 +13,7 @@
     "dev": "npm run vite",
     "vite": "vite",
     "vite-build": "vite build",
+    "build": "vite build",
     "postinstall": "patch-package"
   },
   "keywords": [
