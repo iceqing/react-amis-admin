@@ -138,6 +138,41 @@ const schema = {
           "vendor": "",
           "className": "text-info text-xl"
         },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-home",
+          "vendor": "",
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-dashboard",
+          "vendor": "",
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-edit",
+          "vendor": "",
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-home",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-th",
+          "vendor": "",
+        },
+        {
+          "type": "icon",
+          "icon": "fa fa-th",
+          "vendor": "",
+          "className": "text-info text-xl"
+        },
       ],
     },
   ],
