@@ -4,7 +4,8 @@ const schema = {
   type: 'service',
   schemaApi: {
     "method": "get",
-    "url": "/api/schemaApi/demo1"
+    // 这里的schemaKey为url中的查询参数，可以根据需要自行定义
+    "url": "/api/schemaApi/demo1?schemaKey=${schemaKey}"
   }
 }
 
