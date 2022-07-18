@@ -65,7 +65,7 @@
     "fs-walk": "0.0.2",
     "html-minifier": "^4.0.0",
     "html-webpack-plugin": "^4.0.1",
-    "mocker-api": "^1.11.2",
+    "mocker-api": "^2.9.5",
     "mockjs": "^1.1.0",
     "patch-package": "^6.4.7",
     "sass": "^1.45.2",
