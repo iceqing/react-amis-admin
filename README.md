@@ -13,10 +13,9 @@
 </div>
 
 
-> 本仓库主要目的在于提供一个开箱可用的`Amis` + `React` 低代码开发环境。支持Amis低代码, 
-> 同时支持React原生方式开发或者可选支持`Antd`等组件来定制复杂页面，本工程不包含后端代码，前后端分离。
-
-
+> 本仓库主要目的在于提供一个开箱可用的`Amis` + `React` 低代码开发环境, 提供`vite`和`webpack`两种版本打包的方式。
+> 支持`Amis`低代码, 同时支持`React`原生方式开发或者可选支持`Antd`等组件来定制复杂页面。
+> 本工程不包含后端代码，前后端分离。
 
 ## 使用方法
 ```
@@ -74,6 +73,12 @@ import Hello from "@/pages/Hello";
 ### 3、启动项目，测试即可
 通过`npm start`,然后输入
 [http://localhost:8080/hello](http://localhost:8080/hello)即可访问刚刚新建的页面
+
+
+## vite与webpack的介绍
+
+提供`vite`和`webpack`两种版本打包的方式，对应`vite`和`webpack`分支。
+`vite`由于采用`esm`机制，热更新会更快。`webpack`由于目前广泛使用，插件更丰富，使用方可以根据自己的场景做选择。
 
 
 ## Amis文档
