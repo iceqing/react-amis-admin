@@ -15,7 +15,7 @@ import {request} from './utils/requestInterceptor';
 // css
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap/dist/css/bootstrap.css';
-import './scss/iconfont/iconfont.css';
+import 'amis/sdk/iconfont.css';
 import 'amis-ui/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
 import './scss/style.scss'
