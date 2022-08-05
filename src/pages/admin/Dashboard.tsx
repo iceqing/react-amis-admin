@@ -71,6 +71,11 @@ const schema = {
                 },
                 {
                     "type": "chart",
+                    "api": "/api/gauge/simple",
+                    "interval": 5000
+                },
+                {
+                    "type": "chart",
                     "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chart",
                     "interval": 5000
                 }
