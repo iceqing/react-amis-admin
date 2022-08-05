@@ -1,16 +1,16 @@
 import * as React from "react";
-import Dashboard from "../pages/admin/Dashboard";
+import Dashboard from "../pages/Dashboard";
 import BasicForm from '@/pages/admin/form/Basic'
 import Advanced from "../pages/admin/form/Advanced";
 import Wizard from "../pages/admin/form/Wizard";
 import Editor from "../pages/admin/form/Editor";
 import CustomIndex from '@/pages/admin/customer';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
+import Login from '../pages/admin/common/Login';
+import Register from '../pages/admin/common/Register';
 import Hello from "@/pages/Hello";
 import Simple from "@/pages/admin/dialog/Simple";
 import Icon from "@/pages/admin/icon/Simple";
-import Tabs from "@/pages/Tabs";
+import Tabs from "@/pages/admin/common/Tabs";
 import SchemaApiDemo1 from "@/pages/admin/schema/index";
 
 const path2components = [

@@ -6,7 +6,7 @@ import {
 import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
 import { observer } from 'mobx-react';
 import { IMainStore } from '../stores';
-import Login from '../pages/Login';
+import Login from '../pages/admin/common/Login';
 import AdminRoute from '../pages/admin';
 
 import 'froala-editor/css/froala_style.min.css';
