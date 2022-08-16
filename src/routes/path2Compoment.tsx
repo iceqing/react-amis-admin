@@ -12,6 +12,7 @@ import Simple from "@/pages/admin/dialog/Simple";
 import Icon from "@/pages/admin/icon/Simple";
 import Tabs from "@/pages/admin/common/Tabs";
 import SchemaApiDemo1 from "@/pages/admin/schema/index";
+import Simple2 from "@/pages/admin/dialog/Simple2";
 
 const path2components = [
     {
@@ -61,6 +62,10 @@ const path2components = [
     {
         path: '/dialog/simple',
         component: Simple
+    },    
+    {
+        path: '/dialog/simple2',
+        component: Simple2
     },
     {
         path: '/icon/simple',

@@ -1,38 +1,43 @@
-import {defineConfig} from 'vite';
-import react from '@vitejs/plugin-react';
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import reactRefresh from "@vitejs/plugin-react-refresh";
+import viteEasyMock from "vite-easy-mock";
 import { viteMockServe } from "vite-plugin-mock";
-// https://vitejs.dev/config/
+
+
 export default defineConfig({
     plugins: [
         react({
-        babel: {
-            plugins: [
-                ["@babel/plugin-proposal-decorators", {legacy: true}],
-                ["@babel/plugin-proposal-class-properties", {loose: true}],
-            ],
-        }
-    }), reactRefresh(),
+            babel: {
+                plugins: [
+                    ["@babel/plugin-proposal-decorators", { legacy: true }],
+                    ["@babel/plugin-proposal-class-properties", { loose: true }],
+                ],
+            },
+        }),
+        viteEasyMock({
+            pattern:"/api"
+        }),
+        reactRefresh(),
         viteMockServe({
-                mockPath: 'mock',
-                localEnabled: true,
-        }
-        )
+            mockPath: 'mock',
+            localEnabled: true,
+    }
+    )
     ],
-    base: '/',
+    base: "/",
     resolve: {
-        extensions: ['.js', '.ts', '.tsx', '.json'],
-        alias: [{find: '@', replacement: '/src/'}],
+        extensions: [".js", ".ts", ".tsx", ".json"],
+        alias: [{ find: "@", replacement: "/src/" }],
     },
-    optimizeDeps:{
-        esbuildOptions:{
-            plugins:[
-            ]
-        }
+    optimizeDeps: {
+        esbuildOptions: {
+            plugins: [],
+        },
     },
     server: {
         port: 4000,
-        host: 'localhost',
-        open: '/',
-    }
+        host: "localhost",
+        open: "/",
+    },
 });
