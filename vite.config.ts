@@ -2,8 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import viteEasyMock from "vite-easy-mock";
-import { viteMockServe } from "vite-plugin-mock";
-
 
 export default defineConfig({
     plugins: [
@@ -15,15 +13,8 @@ export default defineConfig({
                 ],
             },
         }),
-        viteEasyMock({
-            pattern:"/api"
-        }),
-        reactRefresh(),
-        viteMockServe({
-            mockPath: 'mock',
-            localEnabled: true,
-    }
-    )
+        viteEasyMock(),
+        reactRefresh()
     ],
     base: "/",
     resolve: {
