@@ -11,6 +11,7 @@
       "strictNullChecks": true,
       "experimentalDecorators":true,
       "emitDecoratorMetadata": true,
+      "allowSyntheticDefaultImports": true,
       "moduleResolution": "node",
       "baseUrl": "./",
       "paths": {
