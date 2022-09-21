@@ -7,7 +7,7 @@ import {
 } from 'amis';
 import axios from 'axios';
 import { MainStore } from './stores';
-import * as copy from 'copy-to-clipboard';
+import copy from 'copy-to-clipboard';
 import RootRoute from './routes';
 import './utils/polyfill';
 import {request} from './utils/requestInterceptor';
