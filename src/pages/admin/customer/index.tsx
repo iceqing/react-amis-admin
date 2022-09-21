@@ -33,6 +33,7 @@ const schema = {
             {
                 name: "name",
                 label: "姓名",
+                "copyable": true
             },
             {
                 name: "age",
