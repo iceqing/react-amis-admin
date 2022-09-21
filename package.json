@@ -33,7 +33,7 @@
     "antd": "^4.18.6",
     "axios": "^0.24.0",
     "bootstrap": "^5.1.0",
-    "copy-to-clipboard": "3.0.8",
+    "copy-to-clipboard": "3.3.2",
     "core-js": "^2.5.7",
     "lodash": "^4.17.11",
     "mobx": "4.15.4",
