@@ -9,6 +9,17 @@ const schema = {
       title: "常见示例图标",
       body: [
         {
+          "type": "card",
+          "href": "https://fontawesome.com/v6/search?o=r&m=free",
+          "header": {
+            "title": "FontAwesome",
+            "subTitle": "",
+            "description": "点击搜索所有免费图标",
+            "avatarText": ""
+          },
+          "body": "https://fontawesome.com/v6/search?o=r&m=free"
+        },
+        {
           type: "icon",
           icon: "user",
         },

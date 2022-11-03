@@ -13,7 +13,7 @@ import Icon from "@/pages/admin/icon/Simple";
 import Tabs from "@/pages/admin/common/Tabs";
 import SchemaApiDemo1 from "@/pages/admin/schema/index";
 import Simple2 from "@/pages/admin/dialog/Simple2";
-
+import Horizontal from "@/pages/admin/horizontal";
 const path2components = [
     {
         path: '/',
@@ -78,6 +78,10 @@ const path2components = [
     {
         path: '/schemaApi/demo1',
         component: SchemaApiDemo1
+    },
+    {
+        path: '/horizontal',
+        component: Horizontal
     }
 ]
 

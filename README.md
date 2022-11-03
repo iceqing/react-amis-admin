@@ -104,7 +104,7 @@ https://baidu.gitee.io/amis/examples/index
 ## 其他
 
 图标网站：
-https://fontawesome.com/v5.15/icons?d=listing&p=2&s=solid&m=free
+https://fontawesome.com/v6/search?o=r&m=free
 
 ## 鸣谢
 特别感谢 [JetBrains](https://www.jetbrains.com/?from=react-amis-admin) 为开源项目提供免费的 [IntelliJ WebStorm](https://www.jetbrains.com/idea/?from=mirai) 等 IDE 的授权  

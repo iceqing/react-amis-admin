@@ -1,4 +1,4 @@
-{
+const menu = {
   "status": 0,
   "data": [
     {
@@ -38,6 +38,11 @@
           "path": "/icon/simple",
           "label": "Icon",
           "icon": "fa fa-th"
+        },
+        {
+          "path": "/horizontal",
+          "label": "排版",
+          "icon": "fa fa-grip"
         },
         {
           "label": "表单页面",
@@ -82,3 +87,4 @@
     }
   ]
 }
+export default menu;
