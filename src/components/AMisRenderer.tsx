@@ -71,8 +71,11 @@ export default class AMisRenderer extends React.Component<RendererProps, any> {
             return pathname + search + hash;
         }
 
+        //如果不是线上环境，则开启调试
+        const isNotProd = process.env.NODE_ENV!='production';
         // todo，这个过程可以 cache
         this.env = {
+            enableAMISDebug: isNotProd,
             session: 'global',
             updateLocation: props.updateLocation || ((location:string, replace:boolean) => {
                 if (location === 'goBack') {
