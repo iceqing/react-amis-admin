@@ -36,7 +36,7 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
       console.log("login res", res);
       if (res.data != null && res.data.status === 0) {
         store.user.login(this.state.inputUsername);
-        toast['info']('登陆成功', '消息')
+        toast.info('登陆成功', {"timeout":"1400", "position":"top-center"})
         // 跳转到dashboard页面
         console.log("replace history to dashboard, value:", value)
         history.replace(`/dashboard`)
