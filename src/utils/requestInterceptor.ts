@@ -9,7 +9,7 @@ export function request(config: AxiosRequestConfig) {
     let instance = axios.create();
     return new Promise((resolve, reject) => {
         let onSuccess = (res:any) => {
-            console.log("onSuccess", res);
+            // console.log("onSuccess", res);
             if (res.data == null) {
                 console.log("reject data")
                 reject(res);
