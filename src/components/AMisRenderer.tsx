@@ -5,7 +5,7 @@ import {
 import { IMainStore } from '@/stores';
 import { getEnv } from 'mobx-state-tree';
 import { inject, observer } from 'mobx-react';
-import { withRouter, RouteComponentProps } from 'react-router';
+import { withRouter } from 'react-router';
 import * as qs from 'qs';
 import { Action } from 'amis/lib/types';
 

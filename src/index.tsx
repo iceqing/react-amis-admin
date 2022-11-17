@@ -2,15 +2,8 @@
  * @file entry of this example.
  */
 import * as React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
-
-export function bootstrap(mountTo:HTMLElement) {
-    render(
-        <App />,
-        mountTo
-    );
-}
 
 (self as any).MonacoEnvironment = {
     getWorkerUrl: function (moduleId:any, label:string) {
@@ -31,4 +24,6 @@ export function bootstrap(mountTo:HTMLElement) {
   }
 
 
-bootstrap(document.getElementById('root')!);
+createRoot(document.getElementById('root')!).render(
+  <App />
+);
