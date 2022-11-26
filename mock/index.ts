@@ -4,16 +4,8 @@
 // import GaugeSimple from "./GaugeSimple"
 // import customer from "./Customer"
 // import SchemaApiDemo from "./SchemaApiDemo"
-import menu from './api/menus'
 
 export default [
-  {
-    url: '/api/menus',
-    method: 'get',
-    response: () => {
-      return menu
-    }
-  },
   {
     url: '/api/form/save',
     method: 'post',
