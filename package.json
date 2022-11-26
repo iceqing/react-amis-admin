@@ -25,7 +25,7 @@
   "author": "iceq",
   "license": "Apache License 2.0",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "amis": "^2.4.0",
     "amis-core": "^2.4.0",
     "amis-formula": "^2.4.0",
