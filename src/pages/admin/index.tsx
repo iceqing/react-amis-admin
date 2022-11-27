@@ -1,24 +1,20 @@
 import * as React from "react";
 import {
   RouteComponentProps,
-  Route,
   Link,
   Switch,
   Redirect,
   matchPath,
 } from "react-router-dom";
 import { Space } from "antd";
-import { Menu, Avatar, Dropdown, Image } from "antd";
-import { Layout, Button, AsideNav, Spinner } from "amis";
+import { Avatar, Dropdown } from "antd";
+import { Layout, Button, AsideNav } from "amis";
 import { IMainStore } from "@/stores";
 import { inject, observer } from "mobx-react";
 import { request } from "@/utils/requestInterceptor";
 import RouterGuard from "@/routes/RouterGuard";
 import { toast } from "amis";
 import {
-  DownOutlined,
-  LogoutOutlined,
-  SettingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 

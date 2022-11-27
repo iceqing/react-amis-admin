@@ -10,3 +10,5 @@ dist.tar.gz
 /deploy-docs.sh
 /docs.tar.gz
 .DS_Store
+stats.html
+stats
