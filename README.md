@@ -22,7 +22,11 @@
 npm i
 npm start
 ```
-即可访问页面
+即可访问页面,效果如下
+
+![image-20221127173957371](docs/example.png)
+
+
 
 ## 如何新增一个Amis页面？
 
