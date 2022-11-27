@@ -75,8 +75,8 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
           </span>
 
           <div className="flex flex-row justify-center ">
-            <div className="m-32">
-            <Card className="p-12" >
+            <div className="m-28">
+            <Card className="p-8" >
             <div className="mb-3">
                 <Input
                   prefix={<UserOutlined className="site-form-item-icon" />}
