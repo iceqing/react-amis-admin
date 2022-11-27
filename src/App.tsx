@@ -14,12 +14,10 @@ import {request} from './utils/requestInterceptor';
 
 // css
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import 'bootstrap/dist/css/bootstrap.css';
 import 'amis/sdk/iconfont.css';
 import 'amis-ui/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
 import './scss/style.scss';
-import 'antd/dist/antd.css';
 
 export default function():JSX.Element {
     const store = (window as any).store = MainStore.create({}, {
