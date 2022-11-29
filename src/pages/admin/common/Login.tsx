@@ -75,7 +75,7 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
           </span>
 
           <div className="flex flex-row justify-center ">
-            <div className="m-28">
+            <div className="m-24">
             <Card className="p-8" >
             <div className="mb-3">
                 <Input
