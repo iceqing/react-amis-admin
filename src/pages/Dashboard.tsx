@@ -76,7 +76,7 @@ const schema = {
                 },
                 {
                     "type": "chart",
-                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chart",
+                    "api": "/api/chart/chart",
                     "interval": 5000
                 }
             ]
@@ -87,7 +87,7 @@ const schema = {
             "columns": [
                 {
                     "type": "chart",
-                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chartData",
+                    "api": "/api/chart/chartData",
                     "config": {
                         "xAxis": {
                             "type": "category",
@@ -113,7 +113,7 @@ const schema = {
                 },
                 {
                     "type": "chart",
-                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/chart/chart2?name=$name"
+                    "api": "/api/chart/chart2"
                 },
             ]
         }
