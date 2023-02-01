@@ -19,11 +19,9 @@
 
 ## 使用方法
 ```
-npm i --legacy-peer-deps
+npm i
 npm start
 ```
-
-**注意**:这里如果包冲突需要指定`--legacy-peer-deps`参数，即`npm i --legacy-peer-deps`
 
 
 即可访问页面,效果如下
