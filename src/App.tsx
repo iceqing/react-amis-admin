@@ -12,6 +12,7 @@ import RootRoute from './routes';
 import './utils/polyfill';
 import {request} from './utils/requestInterceptor';
 
+import "moment/dist/locale/zh-cn";
 // css
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'amis/sdk/iconfont.css';
