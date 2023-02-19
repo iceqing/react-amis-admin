@@ -115,3 +115,7 @@ https://fontawesome.com/v6/search?o=r&m=free
 ## 鸣谢
 特别感谢 [JetBrains](https://www.jetbrains.com/?from=react-amis-admin) 为开源项目提供免费的 [IntelliJ WebStorm](https://www.jetbrains.com/idea/?from=mirai) 等 IDE 的授权  
 [<img src="docs/jetbrains-logo.png" width="200"/>](https://www.jetbrains.com/?from=react-amis-admin)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=iceqing/react-amis-admin&type=Date)](https://star-history.com/#iceqing/react-amis-admin&Date)
