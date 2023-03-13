@@ -18,6 +18,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'amis/sdk/iconfont.css';
 import 'amis-ui/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
+import 'amis/sdk/iconfont.css';
 import './scss/style.scss';
 
 export default function():JSX.Element {

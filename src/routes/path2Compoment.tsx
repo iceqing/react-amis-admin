@@ -14,6 +14,7 @@ import Tabs from "@/pages/admin/common/Tabs";
 import SchemaApiDemo1 from "@/pages/admin/schema/index";
 import Simple2 from "@/pages/admin/dialog/Simple2";
 import Horizontal from "@/pages/admin/horizontal";
+import AmisEditor from "../pages/admin/editor/Editor";
 const path2components = [
     {
         path: '/',
@@ -82,6 +83,10 @@ const path2components = [
     {
         path: '/horizontal',
         component: Horizontal
+    },
+    {
+        path: '/editor',
+        component: AmisEditor
     }
 ]
 
