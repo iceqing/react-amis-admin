@@ -7,7 +7,7 @@
       "jsx": "react",
       "noImplicitReturns": true,
       "noImplicitThis": true,
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "strictNullChecks": true,
       "experimentalDecorators":true,
       "emitDecoratorMetadata": true,

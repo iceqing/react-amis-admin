@@ -1,28 +1,42 @@
-/**
- * @file entry of this example.
- */
 import * as React from 'react';
-// import { createRoot } from 'react-dom/client';
 import { render } from 'react-dom';
 import App from './App';
 
-(self as any).MonacoEnvironment = {
-    getWorkerUrl: function (moduleId:any, label:string) {
-      if (label === 'json') {
-        return '/json.worker.bundle.js';
+self.MonacoEnvironment = {
+  getWorker: async function (workerId, label) {
+    switch (label) {
+      case 'json': {
+        // @ts-ignore
+        const jsonWorker = (await import('monaco-editor/esm/vs/language/json/json.worker?worker')).default;
+        return jsonWorker();
       }
-      if (label === 'css') {
-        return '/css.worker.bundle.js';
+      case 'css':
+      case 'scss':
+      case 'less': {
+        // @ts-ignore
+        const cssWorker = (await import("/monaco-editor/esm/vs/language/css.worker?worker")).default;
+        return cssWorker();
       }
-      if (label === 'html') {
-        return '/html.worker.bundle.js';
+      case 'html':
+        {
+          // @ts-ignore
+          const htmlWorker = (await import('monaco-editor/esm/vs/language/html/html.worker?worker')).default;
+          return htmlWorker();
+        }
+      case 'typescript':
+      case 'javascript': {
+        // @ts-ignore
+        const tsWorker = (await import('monaco-editor/esm/vs/language/typescript/ts.worker?worker')).default;
+        return tsWorker();
       }
-      if (label === 'typescript' || label === 'javascript') {
-        return '/ts.worker.bundle.js';
+      default: {
+        // @ts-ignore
+        const EditorWorker = (await import('monaco-editor/esm/vs/editor/editor.worker?worker')).default;
+        return EditorWorker();
       }
-      return '/editor.worker.bundle.js';
     }
   }
+};
 
 
 render(
