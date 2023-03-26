@@ -9,6 +9,7 @@
       "noImplicitThis": true,
       "noImplicitAny": false,
       "strictNullChecks": true,
+      "resolveJsonModule": true,
       "experimentalDecorators":true,
       "emitDecoratorMetadata": true,
       "allowSyntheticDefaultImports": true,
