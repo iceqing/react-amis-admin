@@ -14,7 +14,7 @@ self.MonacoEnvironment = {
       case 'scss':
       case 'less': {
         // @ts-ignore
-        const cssWorker = (await import("/monaco-editor/esm/vs/language/css.worker?worker")).default;
+        const cssWorker = (await import("monaco-editor/esm/vs/language/css/css.worker?worker")).default;
         return cssWorker();
       }
       case 'html':
