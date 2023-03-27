@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import reactRefresh from "@vitejs/plugin-react-refresh";
 import viteEasyMock from "vite-easy-mock";
 import visualizer from 'rollup-plugin-visualizer'
 export default defineConfig({
@@ -14,7 +13,6 @@ export default defineConfig({
             },
         }),
         viteEasyMock(),
-        reactRefresh(),
         visualizer({ open: true })
     ],
     base: "/",
