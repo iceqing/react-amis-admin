@@ -2,11 +2,11 @@ import {
     types,
     getEnv
 } from "mobx-state-tree";
-import User  from "./User";
+// import User  from "./User";
 const MainStore = types
     .model('MainStore', {
         theme: 'cxd',
-        user: types.optional(User, {}),
+        // user: types.optional(User, {}),
         asideFixed: true,
         asideFolded: false,
         offScreen: false

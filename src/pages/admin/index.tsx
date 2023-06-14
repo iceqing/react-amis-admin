@@ -14,6 +14,7 @@ import { inject, observer } from "mobx-react";
 import { request } from "@/utils/requestInterceptor";
 import RouterGuard from "@/routes/RouterGuard";
 import { toast } from "amis";
+import appStore from "@/stores/appStore"
 import {
   UserOutlined,
 } from "@ant-design/icons";
@@ -54,7 +55,7 @@ export default class Admin extends React.Component<AdminProps, any> {
 
   logout = () => {
     const store = this.props.store;
-    store.user.logout();
+    // store.user.logout();
     const history = this.props.history;
     history.replace(`/login`);
   };
@@ -62,11 +63,11 @@ export default class Admin extends React.Component<AdminProps, any> {
   componentDidMount() {
     const store = this.props.store;
     const history = this.props.history;
-    console.log("componentDidMount, store.user:", store.user);
-    if (!store.user.isAuthenticated) {
-      toast["error"]("用户未登陆，请先登陆！", "消息");
-      history.replace(`/login`);
-    }
+    console.log("componentDidMount, store.user:", appStore.userStore.name);
+    // if (!store.user.isAuthenticated) {
+    //   toast["error"]("用户未登陆，请先登陆！", "消息");
+    //   history.replace(`/login`);
+    // }
     this.refreshMenu();
   }
 
@@ -78,12 +79,12 @@ export default class Admin extends React.Component<AdminProps, any> {
     const store = this.props.store;
     let pathname = this.props.location.pathname;
     console.log("location:", pathname);
-    console.log("store.user:", store.user);
+    console.log("store.user:",  appStore.userStore.name);
     if (
       pathname != "login" &&
       pathname != "/" &&
       !this.state.hasLoadMenu &&
-      store.user.isAuthenticated
+      appStore.userStore.isAuthenticated
     ) {
       request({
         method: "get",

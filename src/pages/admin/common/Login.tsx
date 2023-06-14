@@ -7,6 +7,7 @@ import { inject, observer } from "mobx-react";
 import { withRouter } from "react-router";
 import { UserOutlined, KeyOutlined } from "@ant-design/icons";
 import { Input, Button, Card } from "antd";
+import appStore from "@/stores/appStore"
 interface LoginProps extends RouteComponentProps<any> {
   store: IMainStore;
 }
@@ -34,7 +35,7 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
       .then((res) => {
         console.log("login res", res);
         if (res.data != null && res.data.status === 0) {
-          store.user.login(this.state.inputUsername);
+          appStore.userStore.login(this.state.inputUsername);
           toast.info("登陆成功", { timeout: "1400", position: "top-center" });
           // 跳转到dashboard页面
           console.log("replace history to dashboard, value:", value);
@@ -52,9 +53,8 @@ export default class LoginRoute extends React.Component<LoginProps, any> {
   };
 
   componentDidMount() {
-    const store = this.props.store;
-    console.log("store.user.name", store.user.name);
-    console.log("store.user.isAuthenticated", store.user.isAuthenticated);
+    console.log("appStore.userStore.name", appStore.userStore.name);
+    console.log("store.user.isAuthenticated", appStore.userStore.isAuthenticated);
   }
 
   handleChangeForUsername = (e: any) => {
