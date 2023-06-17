@@ -54,20 +54,18 @@ export default class Admin extends React.Component<AdminProps, any> {
   };
 
   logout = () => {
-    const store = this.props.store;
-    // store.user.logout();
+    appStore.userStore.logout();
     const history = this.props.history;
     history.replace(`/login`);
   };
 
   componentDidMount() {
-    const store = this.props.store;
     const history = this.props.history;
     console.log("componentDidMount, store.user:", appStore.userStore.name);
-    // if (!store.user.isAuthenticated) {
-    //   toast["error"]("用户未登陆，请先登陆！", "消息");
-    //   history.replace(`/login`);
-    // }
+    if (!appStore.userStore.isAuthenticated) {
+      toast["error"]("用户未登陆，请先登陆！", "消息");
+      history.replace(`/login`);
+    }
     this.refreshMenu();
   }
 
@@ -76,7 +74,6 @@ export default class Admin extends React.Component<AdminProps, any> {
   }
 
   refreshMenu = () => {
-    const store = this.props.store;
     let pathname = this.props.location.pathname;
     console.log("location:", pathname);
     console.log("store.user:",  appStore.userStore.name);
@@ -166,7 +163,7 @@ export default class Admin extends React.Component<AdminProps, any> {
           if (link.hidden) {
             return null;
           }
-          let children = [];
+          let children: any[] = [];
 
           if (link.children) {
             children.push(

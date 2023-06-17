@@ -5,6 +5,10 @@ class UserStore {
     @observable
     name = "";
 
+    constructor() {
+        this.name =  localStorage.getItem('authenticated') || '';
+    }
+
     @computed
     get isAuthenticated() {
         return !!this.name;
@@ -18,6 +22,15 @@ class UserStore {
     @action
     login(name) {
         this.name=name;
+        localStorage.setItem('authenticated', name);
+    }
+
+
+    @action
+    logout() {
+        localStorage.setItem('authenticated', '');
+        this.name = '';
+        console.log("logout finished!");
     }
 
 }
