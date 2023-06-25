@@ -1,4 +1,5 @@
 import schema2component from "@/utils/schema2component";
+import './Demo';
 
 const schema = {
   type: "page",
@@ -183,6 +184,19 @@ const schema = {
           "icon": "fa fa-th",
           "vendor": "",
           "className": "text-info text-xl"
+        },
+        {
+          "type": "divider"
+        },
+        {
+          "type": "text",
+          "value": "自定义图标"
+        },
+        {
+          type: "icon",
+          icon: "custom-icon-1",
+          // 设置图标长度和宽度
+          "className": "w-7 h-7"
         },
       ],
     },
