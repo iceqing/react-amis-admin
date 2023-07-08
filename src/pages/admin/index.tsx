@@ -29,11 +29,27 @@ type NavItem = {
 };
 
 function isActive(link: any, location: any) {
+  // console.log("link", link);
+  // console.log("location", location);
+  let path = link.path;
+
   const ret = matchPath(location.pathname, {
-    path: link ? link.replace(/\?.*$/, "") : "",
+    path: path ? path.replace(/\?.*$/, "") : "",
     exact: true,
     strict: true,
   });
+
+  if (link != null && link.children != null) {
+    let items = link.children;
+    for (const item of items) {
+      let flag = isActive(item, location)
+      if (flag) {
+        return true;
+      } else {
+        continue;
+      }
+    }
+  }
 
   return !!ret;
 }
@@ -45,7 +61,7 @@ export interface AdminProps extends RouteComponentProps<any> {
 @inject("store")
 @observer
 export default class Admin extends React.Component<AdminProps, any> {
- 
+
 
   state = {
     pathname: "",
@@ -76,7 +92,7 @@ export default class Admin extends React.Component<AdminProps, any> {
   refreshMenu = () => {
     let pathname = this.props.location.pathname;
     console.log("location:", pathname);
-    console.log("store.user:",  appStore.userStore.name);
+    console.log("store.user:", appStore.userStore.name);
     if (
       pathname != "login" &&
       pathname != "/" &&
@@ -140,7 +156,7 @@ export default class Admin extends React.Component<AdminProps, any> {
             <Dropdown menu={{ items }} placement="bottomLeft" trigger={['click', 'hover']}>
               <Button>
                 <Space>
-                <Avatar icon={<UserOutlined />} />
+                  <Avatar icon={<UserOutlined />} />
                   admin
                 </Space>
               </Button>
@@ -160,6 +176,7 @@ export default class Admin extends React.Component<AdminProps, any> {
         key={store.asideFolded ? "folded-aside" : "aside"}
         navigations={this.state.navigations}
         renderLink={({ link, toggleExpand, classnames: cx, depth }: any) => {
+          console.log("renderLink", link);
           if (link.hidden) {
             return null;
           }
@@ -221,15 +238,15 @@ export default class Admin extends React.Component<AdminProps, any> {
                 link.onClick
                   ? link.onClick
                   : link.children
-                  ? () => toggleExpand(link)
-                  : undefined
+                    ? () => toggleExpand(link)
+                    : undefined
               }
             >
               {children}
             </a>
           );
         }}
-        isActive={(link: any) => isActive(link.path, location)}
+        isActive={(link: any) => isActive(link, location)}
       />
     );
   }
