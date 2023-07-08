@@ -176,7 +176,6 @@ export default class Admin extends React.Component<AdminProps, any> {
         key={store.asideFolded ? "folded-aside" : "aside"}
         navigations={this.state.navigations}
         renderLink={({ link, toggleExpand, classnames: cx, depth }: any) => {
-          console.log("renderLink", link);
           if (link.hidden) {
             return null;
           }
