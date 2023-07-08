@@ -51,8 +51,11 @@ module.exports = () => {
             children: [
               {
                 label: "常规表单",
-                path: "/form/basic",
                 children: [
+                  {
+                    label: "常规表单",
+                    path: "/form/basic",
+                  },
                   {
                     label: "三级目录测试",
                     path: "/form/basic/advanced",
