@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import App from './App';
-
+import { configure } from 'mobx';
+import { createRoot } from 'react-dom/client';
 self.MonacoEnvironment = {
   getWorker: async function (workerId, label) {
     switch (label) {
@@ -38,7 +39,7 @@ self.MonacoEnvironment = {
   }
 };
 
+configure({ isolateGlobalState: true })
 
-render(
-  <App />, document.getElementById('root')!
-);
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);

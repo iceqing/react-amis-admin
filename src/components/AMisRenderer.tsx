@@ -2,19 +2,20 @@ import * as React from 'react';
 import {
     render as renderSchema
 } from 'amis';
-import { IMainStore } from '@/stores';
-import { getEnv } from 'mobx-state-tree';
+// import { IMainStore } from '@/stores';
+// import { getEnv } from 'mobx-state-tree';
 import { inject, observer } from 'mobx-react';
 import { withRouter } from 'react-router';
+import appStore from "@/stores/appStore"
 import * as qs from 'qs';
 import { Action } from 'amis/lib/types';
+
 
 interface RendererProps {
     schema?:any;
     [propName:string]:any;
 }
 
-@inject("store")
 // @ts-ignore
 @withRouter
 @observer
@@ -27,14 +28,13 @@ export default class AMisRenderer extends React.Component<RendererProps, any> {
 
     constructor(props:RendererProps) {
         super(props);
-        const store = props.store as IMainStore;
-        const fetcher = getEnv(store).fetcher;
-        const notify = getEnv(store).notify;
-        const alert = getEnv(store).alert;
-        const confirm = getEnv(store).confirm;
-        const copy = getEnv(store).copy;
-        const apiHost = getEnv(store).apiHost;
-        const getModalContainer = getEnv(store).getModalContainer;
+        const fetcher = appStore.mainStore.fetcher;
+        const notify = appStore.mainStore.notify;
+        const alert = appStore.mainStore.alert;
+        const confirm = appStore.mainStore.confirm;
+        const copy = appStore.mainStore.copy;
+        const apiHost = appStore.mainStore.apiHost;
+        const getModalContainer = appStore.mainStore.getModalContainer;
         const history = props.history;
 
         const normalizeLink = (to:string) => {

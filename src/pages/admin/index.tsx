@@ -9,7 +9,6 @@ import {
 import { Space } from "antd";
 import { Avatar, Dropdown } from "antd";
 import { Layout, Button, AsideNav } from "amis";
-import { IMainStore } from "@/stores";
 import { inject, observer } from "mobx-react";
 import { request } from "@/utils/requestInterceptor";
 import RouterGuard from "@/routes/RouterGuard";
@@ -55,7 +54,7 @@ function isActive(link: any, location: any) {
 }
 
 export interface AdminProps extends RouteComponentProps<any> {
-  store: IMainStore;
+  store: any;
 }
 
 @inject("store")
