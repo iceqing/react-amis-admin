@@ -3,7 +3,7 @@ import {
     ToastComponent,
     AlertComponent,
 } from 'amis';
-import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import { observer } from 'mobx-react';
 import { IMainStore } from '../stores';
 import Login from '../pages/admin/common/Login';
