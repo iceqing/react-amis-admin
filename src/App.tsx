@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'amis/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
+import 'antd/dist/antd.css';
 
 export default function():JSX.Element {
     const store = (window as any).store = MainStore.create({}, {
